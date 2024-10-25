@@ -1,0 +1,15 @@
+# 2 Cálculo de números pares e impares
+set.seed(123) 
+numeros <- sample(1:1000, 100, replace = TRUE)  
+
+cat("Número\t\tClasificación\n")
+cat("----------------------------\n")
+
+for (numero in numeros) {
+  if (numero %% 2 == 0) {
+    clasificacion <- "Par"
+  } else {
+    clasificacion <- "Impar"
+  }
+  cat(numero, "\t\t", clasificacion, "\n")
+}

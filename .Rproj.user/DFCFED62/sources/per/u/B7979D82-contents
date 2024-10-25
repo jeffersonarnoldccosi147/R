@@ -1,0 +1,48 @@
+# 1 Clasificación de números positivos o negativo.
+numeros <- c(1, 5, -9, -6, 2, 7, -7, -6, 7, 10)
+
+positivos <- c()
+negativos <- c()
+
+for (numero in numeros) {
+  if (numero > 0) {
+    positivos <- c(positivos, numero)
+  } else if (numero < 0) {
+    negativos <- c(negativos, numero)
+  }
+}
+
+cat("Números positivos:", positivos, "\n")
+cat("Números negativos:", negativos, "\n")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

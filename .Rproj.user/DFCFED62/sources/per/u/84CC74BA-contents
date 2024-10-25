@@ -1,0 +1,14 @@
+#8. Suma de dígitos de un número:
+
+numero <- as.numeric(readline(prompt = "Introduce un número entero: "))
+suma_digitos <- 0
+
+if (!is.na(numero) && numero >= 0) {
+  while (numero > 0) {
+    suma_digitos <- suma_digitos + (numero %% 10)  
+    numero <- floor(numero / 10)  
+  }
+  cat("La suma de los dígitos es:", suma_digitos, "\n")
+} else {
+  cat("Por favor, introduce un número entero válido.\n")
+}

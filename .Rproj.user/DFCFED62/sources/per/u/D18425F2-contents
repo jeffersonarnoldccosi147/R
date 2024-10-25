@@ -1,0 +1,13 @@
+# 5 Cálculo de factorial:
+
+n <- as.numeric(readline(prompt = "Introduce un número n: "))
+factorial <- 1
+
+if (!is.na(n) && n >= 0) {
+  for (i in 1:n) {
+    factorial <- factorial * i
+  }
+  cat("El factorial de", n, "es:", factorial, "\n")
+} else {
+  cat("Por favor, introduce un número válido y no negativo.\n")
+}

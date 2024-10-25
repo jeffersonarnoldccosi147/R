@@ -1,0 +1,23 @@
+#6. Juego de adivinanza:
+
+set.seed(Sys.time())
+numero_secreto <- sample(1:100, 1)
+intento <- 0
+
+cat("¡Bienvenido al juego de adivinanza!\n")
+cat("He elegido un número entre 1 y 100. Intenta adivinarlo.\n")
+
+repeat {
+  intento <- as.numeric(readline(prompt = "Introduce tu adivinanza: "))
+  
+  if (is.na(intento) || intento < 1 || intento > 100) {
+    cat("Por favor, introduce un número entre 1 y 100.\n")
+  } else if (intento < numero_secreto) {
+    cat("El número es mayor. Intenta de nuevo.\n")
+  } else if (intento > numero_secreto) {
+    cat("El número es menor. Intenta de nuevo.\n")
+  } else {
+    cat("¡Felicidades! Adivinaste el número:", numero_secreto, "\n")
+    break
+  }
+}
